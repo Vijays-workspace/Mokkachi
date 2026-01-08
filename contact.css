@@ -1,0 +1,531 @@
+/* ============================================
+   Contact Section - Enhanced Colorful Design
+   Mokkachi Maintenance Services
+   ============================================ */
+
+.contact-wrapper {
+    display: block;
+    margin-top: var(--spacing-lg);
+}
+
+.contact-info-grid.full-width {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
+/* ========================================
+   Maintenance Worker Character - Floating
+   ======================================== */
+.contact-character {
+    position: relative;
+    text-align: center;
+    animation: floatCharacter 4s ease-in-out infinite;
+    filter: drop-shadow(0 20px 40px rgba(0, 102, 255, 0.25));
+}
+
+@keyframes floatCharacter {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(-1deg);
+    }
+
+    25% {
+        transform: translateY(-12px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-20px) rotate(1deg);
+    }
+
+    75% {
+        transform: translateY(-12px) rotate(0deg);
+    }
+}
+
+.worker-image {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    filter: drop-shadow(0 15px 35px rgba(0, 102, 255, 0.3));
+    transition: all var(--transition-slow);
+}
+
+.contact-character:hover .worker-image {
+    filter: drop-shadow(0 20px 50px rgba(0, 212, 255, 0.5));
+    transform: scale(1.05);
+}
+
+.character-badge {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #00e676 0%, #00c9a7 50%, #00d4ff 100%);
+    color: var(--white);
+    padding: 0.875rem 1.75rem;
+    border-radius: var(--radius-full);
+    box-shadow: 0 8px 25px rgba(0, 230, 118, 0.4), 0 0 30px rgba(0, 212, 255, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 1rem;
+    animation: pulseBadge 2.5s ease-in-out infinite;
+}
+
+@keyframes pulseBadge {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0) scale(1);
+        box-shadow: 0 8px 25px rgba(0, 230, 118, 0.4), 0 0 30px rgba(0, 212, 255, 0.3);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-8px) scale(1.05);
+        box-shadow: 0 15px 40px rgba(0, 230, 118, 0.5), 0 0 50px rgba(0, 212, 255, 0.5);
+    }
+}
+
+.badge-icon {
+    background: var(--white);
+    color: #00c9a7;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* ========================================
+   Contact Info Grid - 4 Colorful Boxes
+   ======================================== */
+.contact-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-md);
+}
+
+.contact-box {
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-xl);
+    transition: all var(--transition-normal);
+    position: relative;
+    overflow: hidden;
+    border: none;
+    color: var(--white);
+}
+
+/* Decorative particles effect */
+.contact-box::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -50%;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 0%, transparent 60%);
+    transition: all var(--transition-slow);
+    pointer-events: none;
+}
+
+.contact-box::after {
+    content: '';
+    position: absolute;
+    bottom: -20%;
+    left: -20%;
+    width: 60%;
+    height: 60%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+/* Box Color Themes */
+.office-box {
+    background: linear-gradient(135deg, #0066ff 0%, #00a8e8 40%, #00d4ff 100%);
+    box-shadow: 0 10px 40px rgba(0, 102, 255, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.phone-box {
+    background: linear-gradient(135deg, #00c853 0%, #00e676 40%, #69f0ae 100%);
+    box-shadow: 0 10px 40px rgba(0, 200, 83, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.email-box {
+    background: linear-gradient(135deg, #ff5722 0%, #ff6b35 40%, #ff9800 100%);
+    box-shadow: 0 10px 40px rgba(255, 87, 34, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.hours-box {
+    background: linear-gradient(135deg, #7c4dff 0%, #6a4ce0 40%, #a855f7 100%);
+    box-shadow: 0 10px 40px rgba(106, 76, 224, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+.whatsapp-box {
+    background: linear-gradient(135deg, #075e54 0%, #25d366 50%, #128c7e 100%);
+    box-shadow: 0 10px 40px rgba(37, 211, 102, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+
+/* Hover Effects */
+.contact-box:hover {
+    transform: translateY(-12px) scale(1.03);
+}
+
+.office-box:hover {
+    box-shadow: 0 20px 60px rgba(0, 102, 255, 0.5), 0 0 40px rgba(0, 212, 255, 0.4);
+}
+
+.phone-box:hover {
+    box-shadow: 0 20px 60px rgba(0, 200, 83, 0.5), 0 0 40px rgba(105, 240, 174, 0.4);
+}
+
+.email-box:hover {
+    box-shadow: 0 20px 60px rgba(255, 87, 34, 0.5), 0 0 40px rgba(255, 152, 0, 0.4);
+}
+
+.hours-box:hover {
+    box-shadow: 0 20px 60px rgba(106, 76, 224, 0.5), 0 0 40px rgba(168, 85, 247, 0.4);
+}
+
+.whatsapp-box:hover {
+    box-shadow: 0 20px 60px rgba(37, 211, 102, 0.5), 0 0 40px rgba(18, 140, 126, 0.4);
+}
+
+.contact-box:hover::before {
+    top: -30%;
+    right: -30%;
+    opacity: 0.8;
+}
+
+/* ========================================
+   Contact Icons - Rotating on Hover
+   ======================================== */
+.contact-icon {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 1.25rem;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    position: relative;
+    z-index: 1;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.contact-icon::before {
+    content: '';
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.4), transparent);
+    opacity: 0;
+    transition: opacity var(--transition-normal);
+}
+
+.contact-icon svg {
+    width: 32px;
+    height: 32px;
+    fill: var(--white);
+    transition: transform 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+/* Icon Rotation on Hover */
+.contact-box:hover .contact-icon {
+    transform: rotate(360deg) scale(1.15);
+    background: rgba(255, 255, 255, 0.35);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+}
+
+.contact-box:hover .contact-icon::before {
+    opacity: 1;
+}
+
+.contact-box:hover .contact-icon svg {
+    transform: scale(1.1);
+}
+
+/* ========================================
+   Contact Text Styles
+   ======================================== */
+.contact-box h3 {
+    color: var(--white);
+    font-size: var(--font-size-lg);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+.address-text,
+.contact-details {
+    color: rgba(255, 255, 255, 0.95);
+    font-size: var(--font-size-sm);
+    line-height: 1.9;
+    text-align: center;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.address-text strong {
+    color: var(--white);
+    font-weight: 800;
+    display: inline-block;
+    margin-top: 0.5rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+}
+
+.contact-details a {
+    color: var(--white);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all var(--transition-fast);
+    display: inline-block;
+    padding: 0.125rem 0;
+    border-bottom: 2px solid transparent;
+}
+
+.contact-details a:hover {
+    border-bottom-color: rgba(255, 255, 255, 0.8);
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/* ========================================
+   Contact CTA Section
+   ======================================== */
+.contact-cta {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-lg);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(240, 244, 248, 0.98) 100%);
+    border-radius: var(--radius-xl);
+    box-shadow: 0 10px 40px rgba(0, 102, 255, 0.15);
+    border: 2px solid rgba(0, 212, 255, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.contact-cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-primary);
+}
+
+.btn-large {
+    padding: 1.25rem 3rem;
+    font-size: var(--font-size-lg);
+    background: var(--gradient-accent);
+    border: none;
+    box-shadow: 0 8px 30px rgba(255, 107, 53, 0.4);
+}
+
+.btn-large:hover {
+    box-shadow: 0 12px 45px rgba(255, 107, 53, 0.5), 0 0 30px rgba(255, 20, 147, 0.3);
+}
+
+.cta-subtext {
+    margin-top: var(--spacing-sm);
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+}
+
+/* ========================================
+   Responsive Design - All Devices
+   ======================================== */
+
+/* Large Tablets */
+@media (max-width: 1024px) {
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+
+    .contact-character {
+        max-width: 280px;
+        margin: 0 auto var(--spacing-md);
+    }
+
+    .worker-image {
+        max-width: 250px;
+    }
+}
+
+/* Tablets */
+@media (max-width: 768px) {
+    .contact-info-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .contact-box {
+        padding: var(--spacing-md);
+    }
+
+    .character-badge {
+        font-size: var(--font-size-xs);
+        padding: 0.625rem 1.25rem;
+        bottom: 20px;
+    }
+
+    .badge-icon {
+        width: 22px;
+        height: 22px;
+    }
+
+    .btn-large {
+        padding: 1rem 2rem;
+        font-size: var(--font-size-md);
+    }
+
+    .contact-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .contact-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .contact-box h3 {
+        font-size: var(--font-size-md);
+    }
+
+    .address-text,
+    .contact-details {
+        font-size: var(--font-size-xs);
+    }
+
+    .contact-cta {
+        padding: var(--spacing-md);
+    }
+
+    .character-badge {
+        padding: 0.5rem 1rem;
+    }
+}
+
+/* Smart TV 4K (2560px+) */
+@media (min-width: 2560px) {
+    .contact-wrapper {
+        gap: 6rem;
+    }
+
+    .contact-info-grid {
+        gap: var(--spacing-lg);
+    }
+
+    .contact-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .contact-icon svg {
+        width: 50px;
+        height: 50px;
+    }
+
+    .worker-image {
+        max-width: 500px;
+    }
+
+    .contact-box {
+        padding: 3rem;
+        border-radius: 32px;
+    }
+
+    .contact-box h3 {
+        font-size: 2rem;
+    }
+
+    .address-text,
+    .contact-details {
+        font-size: 1.25rem;
+    }
+
+    .character-badge {
+        padding: 1.25rem 2.5rem;
+        font-size: 1.25rem;
+    }
+
+    .badge-icon {
+        width: 36px;
+        height: 36px;
+    }
+
+    .btn-large {
+        padding: 1.75rem 4rem;
+        font-size: 1.5rem;
+    }
+}
+
+/* Smart TV 8K (3840px+) */
+@media (min-width: 3840px) {
+    .contact-wrapper {
+        gap: 8rem;
+    }
+
+    .contact-icon {
+        width: 130px;
+        height: 130px;
+    }
+
+    .contact-icon svg {
+        width: 65px;
+        height: 65px;
+    }
+
+    .worker-image {
+        max-width: 650px;
+    }
+
+    .contact-box {
+        padding: 4rem;
+        border-radius: 40px;
+    }
+
+    .contact-box h3 {
+        font-size: 2.5rem;
+    }
+
+    .address-text,
+    .contact-details {
+        font-size: 1.5rem;
+        line-height: 2.2;
+    }
+
+    .character-badge {
+        padding: 1.5rem 3rem;
+        font-size: 1.5rem;
+    }
+
+    .badge-icon {
+        width: 44px;
+        height: 44px;
+    }
+
+    .btn-large {
+        padding: 2rem 5rem;
+        font-size: 1.75rem;
+    }
+}

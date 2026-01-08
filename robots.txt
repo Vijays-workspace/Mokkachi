@@ -1,0 +1,15 @@
+# Robots.txt for Mokkachi Maintenance Services
+# https://www.robotstxt.org/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://mokkachi.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Block common unnecessary paths
+Disallow: /*.json$
+Disallow: /service-worker.js
