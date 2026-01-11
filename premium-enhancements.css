@@ -1,0 +1,689 @@
+/* ============================================
+   Mokkachi Premium Enhancements
+   Ultra-Premium Visual Effects
+   ============================================ */
+
+/* ============================================
+   Animated Background Particles
+   ============================================ */
+.particles-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.particle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: linear-gradient(135deg, rgba(0, 212, 255, 0.6), rgba(0, 102, 255, 0.6));
+    border-radius: 50%;
+    animation: floatParticle 15s ease-in-out infinite;
+    box-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+}
+
+.particle:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.particle:nth-child(2) {
+    left: 20%;
+    animation-delay: 2s;
+    animation-duration: 22s;
+}
+
+.particle:nth-child(3) {
+    left: 30%;
+    animation-delay: 4s;
+    animation-duration: 20s;
+}
+
+.particle:nth-child(4) {
+    left: 40%;
+    animation-delay: 1s;
+    animation-duration: 16s;
+}
+
+.particle:nth-child(5) {
+    left: 50%;
+    animation-delay: 3s;
+    animation-duration: 24s;
+}
+
+.particle:nth-child(6) {
+    left: 60%;
+    animation-delay: 5s;
+    animation-duration: 19s;
+}
+
+.particle:nth-child(7) {
+    left: 70%;
+    animation-delay: 2s;
+    animation-duration: 21s;
+}
+
+.particle:nth-child(8) {
+    left: 80%;
+    animation-delay: 4s;
+    animation-duration: 17s;
+}
+
+.particle:nth-child(9) {
+    left: 90%;
+    animation-delay: 1s;
+    animation-duration: 23s;
+}
+
+.particle:nth-child(10) {
+    left: 15%;
+    animation-delay: 3s;
+    animation-duration: 25s;
+}
+
+@keyframes floatParticle {
+
+    0%,
+    100% {
+        transform: translateY(100vh) scale(0);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+        transform: translateY(90vh) scale(1);
+    }
+
+    90% {
+        opacity: 1;
+        transform: translateY(-10vh) scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(-20vh) scale(0);
+    }
+}
+
+/* ============================================
+   Premium Glassmorphism Header
+   ============================================ */
+header {
+    background: rgba(255, 255, 255, 0.7) !important;
+    backdrop-filter: blur(25px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(25px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(0, 212, 255, 0.2) !important;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #00d4ff, #0066ff, #6a4ce0, transparent);
+    background-size: 200% 100%;
+    animation: shimmerHeader 3s ease-in-out infinite;
+}
+
+@keyframes shimmerHeader {
+    0% {
+        background-position: 200% 0;
+    }
+
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+header.scrolled::before {
+    height: 3px;
+}
+
+/* Logo Glow Effect */
+.logo {
+    position: relative;
+}
+
+.logo::before {
+    content: '';
+    position: absolute;
+    inset: -5px;
+    background: radial-gradient(circle at center, rgba(0, 212, 255, 0.2), transparent 70%);
+    border-radius: 20px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+}
+
+.logo:hover::before {
+    opacity: 1;
+}
+
+/* ============================================
+   Ultra-Premium Hero Section
+   ============================================ */
+.hero {
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(ellipse at 20% 30%, rgba(0, 212, 255, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 70%, rgba(106, 76, 224, 0.15) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(0, 102, 255, 0.1) 0%, transparent 70%);
+    z-index: 0;
+    animation: pulseGradient 8s ease-in-out infinite;
+}
+
+@keyframes pulseGradient {
+
+    0%,
+    100% {
+        opacity: 0.5;
+    }
+
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* Animated Text Gradient for Hero Title */
+.hero h1 {
+    background: linear-gradient(135deg, #ffffff 0%, #00d4ff 25%, #ffffff 50%, #6a4ce0 75%, #ffffff 100%);
+    background-size: 300% 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: shimmerText 4s ease-in-out infinite;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes shimmerText {
+    0% {
+        background-position: 100% 50%;
+    }
+
+    50% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Hero CTA Button Premium Glow */
+.hero .btn-primary {
+    position: relative;
+    overflow: visible;
+}
+
+.hero .btn-primary::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    background: linear-gradient(135deg, #ff6b35, #ff1493, #6a4ce0, #00d4ff, #ff6b35);
+    background-size: 300% 300%;
+    border-radius: 20px;
+    z-index: -1;
+    animation: rotatingGlow 3s linear infinite;
+}
+
+@keyframes rotatingGlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* ============================================
+   Premium 3D Service Cards
+   ============================================ */
+.service-card {
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(248, 250, 252, 0.98) 100%) !important;
+    border: 1px solid rgba(0, 212, 255, 0.1) !important;
+    box-shadow:
+        0 10px 40px rgba(0, 102, 255, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.8) inset,
+        0 -1px 0 rgba(0, 0, 0, 0.03) inset !important;
+}
+
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0066ff, #00d4ff, #00c9a7);
+    border-radius: 24px 24px 0 0;
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    transform-origin: left;
+}
+
+.service-card:hover::after {
+    transform: scaleX(1);
+}
+
+.service-card:hover {
+    transform: translateY(-15px) rotateX(2deg) scale(1.02) !important;
+    box-shadow:
+        0 25px 60px rgba(0, 102, 255, 0.25),
+        0 0 40px rgba(0, 212, 255, 0.15),
+        0 1px 0 rgba(255, 255, 255, 0.8) inset !important;
+}
+
+/* Service Card Shine Effect */
+.service-card .service-content::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 60px;
+    height: 200%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    transform: rotate(25deg);
+    transition: all 0.6s ease;
+}
+
+.service-card:hover .service-content::before {
+    left: 150%;
+}
+
+/* ============================================
+   Premium Objective Cards - Floating Effect
+   ============================================ */
+.objective-card {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.98) 0%, rgba(248, 250, 252, 0.95) 100%) !important;
+    box-shadow:
+        0 8px 32px rgba(0, 102, 255, 0.1),
+        0 1px 0 rgba(255, 255, 255, 0.9) inset !important;
+    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1) !important;
+    overflow: hidden;
+}
+
+.objective-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: inherit;
+    border: none;
+    background: var(--gradient-primary);
+    transform: scaleX(0);
+    transition: transform 0.4s ease;
+    border-radius: 0;
+}
+
+.objective-card:hover::after {
+    transform: scaleX(1);
+}
+
+.objective-card:hover {
+    transform: translateY(-12px) scale(1.03) !important;
+    box-shadow:
+        0 20px 50px rgba(0, 102, 255, 0.2),
+        0 0 30px rgba(0, 212, 255, 0.1) !important;
+}
+
+/* Pulsing Icon Animation */
+.objective-icon {
+    animation: pulseIcon 3s ease-in-out infinite;
+    position: relative;
+}
+
+.objective-icon::before {
+    content: '';
+    position: absolute;
+    inset: -8px;
+    border-radius: 50%;
+    background: inherit;
+    opacity: 0.3;
+    filter: blur(10px);
+    animation: glowPulse 2s ease-in-out infinite;
+}
+
+@keyframes pulseIcon {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes glowPulse {
+
+    0%,
+    100% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+}
+
+/* ============================================
+   Section Titles - Premium Styling
+   ============================================ */
+.section-title h2 {
+    position: relative;
+    font-weight: 800;
+}
+
+.section-title h2::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b35, #ff1493);
+    border-radius: 2px;
+}
+
+.section-title h2::after {
+    height: 5px !important;
+    background: linear-gradient(90deg, #0066ff, #00d4ff, #00c9a7, #6a4ce0) !important;
+    background-size: 200% 100%;
+    animation: shimmerUnderline 2s ease-in-out infinite;
+}
+
+@keyframes shimmerUnderline {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+/* ============================================
+   Premium Scroll Indicator
+   ============================================ */
+.scroll-indicator {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0066ff, #00d4ff, #00c9a7, #6a4ce0);
+    z-index: 10001;
+    transform-origin: left;
+    transition: transform 0.1s ease;
+}
+
+/* ============================================
+   Premium Cursor Trail (Optional)
+   ============================================ */
+.cursor-glow {
+    position: fixed;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(0, 212, 255, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9997;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease-out, opacity 0.3s ease;
+}
+
+/* ============================================
+   Premium Footer Enhancement
+   ============================================ */
+footer {
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #0066ff, #00d4ff, #00c9a7, #6a4ce0, #ff6b35);
+}
+
+footer::after {
+    content: '';
+    position: absolute;
+    bottom: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 200px;
+    background: radial-gradient(ellipse, rgba(0, 212, 255, 0.15) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.footer-section h3 {
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30px;
+    height: 2px;
+    background: linear-gradient(90deg, #00d4ff, transparent);
+}
+
+/* ============================================
+   Smooth Page Transitions
+   ============================================ */
+main {
+    animation: pageEnter 0.6s ease-out;
+}
+
+@keyframes pageEnter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ============================================
+   Loading Animation Overlay
+   ============================================ */
+.page-loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, #0f1419, #1a1f2e);
+    z-index: 100000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.page-loader.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.loader-logo {
+    width: 80px;
+    height: 80px;
+    animation: loaderPulse 1.5s ease-in-out infinite;
+}
+
+.loader-ring {
+    width: 100px;
+    height: 100px;
+    border: 4px solid transparent;
+    border-top-color: #00d4ff;
+    border-right-color: #0066ff;
+    border-radius: 50%;
+    animation: loaderSpin 1s linear infinite;
+}
+
+@keyframes loaderSpin {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loaderPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* ============================================
+   Hover Micro-Interactions
+   ============================================ */
+a,
+button,
+.btn {
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+/* Navigation Links Premium Effect */
+nav a {
+    position: relative;
+    overflow: hidden;
+}
+
+nav a::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(0, 212, 255, 0.1), rgba(0, 102, 255, 0.1));
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: -1;
+}
+
+nav a:hover::before {
+    transform: translateY(0);
+}
+
+/* ============================================
+   Mobile-Optimized Enhancements
+   ============================================ */
+@media (max-width: 768px) {
+    .particles-bg {
+        opacity: 0.5;
+    }
+
+    .particle {
+        width: 4px;
+        height: 4px;
+    }
+
+    .cursor-glow {
+        display: none;
+    }
+
+    .hero h1 {
+        background-size: 200% 200%;
+    }
+}
+
+/* ============================================
+   Reduced Motion Support
+   ============================================ */
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .particles-bg {
+        display: none;
+    }
+}
+
+/* ============================================
+   High Contrast Mode Support
+   ============================================ */
+@media (prefers-contrast: high) {
+
+    .service-card,
+    .objective-card {
+        border: 2px solid currentColor !important;
+    }
+}
+
+/* ============================================
+   Smart TV Optimizations (4K+)
+   ============================================ */
+@media (min-width: 2560px) {
+    .particle {
+        width: 10px;
+        height: 10px;
+    }
+
+    .section-title h2::after {
+        height: 6px !important;
+        width: 100px;
+    }
+
+    .scroll-indicator {
+        height: 6px;
+    }
+
+    header::before {
+        height: 4px;
+    }
+}
