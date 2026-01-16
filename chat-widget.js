@@ -1,13 +1,13 @@
 /**
- * Mokkachi Custom Chat Widget
+ * Mokkaachi Custom Chat Widget
  * Interactive chat functionality with automated responses
  */
 
 (function () {
     // Chat Widget Configuration
     const CONFIG = {
-        botName: 'Mokkachi Support',
-        welcomeMessage: "Hello! 👋 Welcome to Mokkachi Maintenance Services. How can I help you today?",
+        botName: 'Mokkaachi Support',
+        welcomeMessage: "Hello! 👋 Welcome to Mokkaachi Maintenance Services. How can I help you today?",
         typingDelay: 1500,
         contactInfo: {
             phone: '+91 90036 19899',
@@ -62,11 +62,11 @@
         },
         thanks: {
             keywords: ['thank', 'thanks', 'bye', 'okay', 'ok', 'great', 'good'],
-            response: "You're welcome! 😊 Feel free to reach out anytime. Have a great day!\n\n⭐ Mokkachi - Your Trusted Maintenance Partner"
+            response: "You're welcome! 😊 Feel free to reach out anytime. Have a great day!\n\n⭐ Mokkaachi - Your Trusted Maintenance Partner"
         },
         greeting: {
             keywords: ['hi', 'hello', 'hey', 'good morning', 'good afternoon', 'good evening'],
-            response: "Hello! 👋 Great to connect with you! How can Mokkachi help you today?\n\nYou can ask about our services, request a quote, or get contact information."
+            response: "Hello! 👋 Great to connect with you! How can Mokkaachi help you today?\n\nYou can ask about our services, request a quote, or get contact information."
         }
     };
 
@@ -108,7 +108,7 @@
                         <span class="chat-avatar-placeholder">🔧</span>
                     </div>
                     <div class="chat-header-info">
-                        <div class="chat-header-title">Mokkachi Support</div>
+                        <div class="chat-header-title">Mokkaachi Support</div>
                         <div class="chat-header-status">
                             <span class="status-dot"></span>
                             Online • Replies instantly
@@ -140,7 +140,7 @@
 
                 <!-- Powered By -->
                 <div class="chat-powered">
-                    Powered by <a href="#contact">Mokkachi</a>
+                    Powered by <a href="#contact">Mokkaachi</a>
                 </div>
             </div>
         `;
@@ -255,7 +255,7 @@
                         <span class="contact-option-icon">📞</span>
                         <span class="contact-option-text">Call Now</span>
                     </a>
-                    <a href="https://wa.me/919003619899?text=Hello%20Mokkachi!" target="_blank" class="contact-option whatsapp">
+                    <a href="https://wa.me/919003619899?text=Hello%20Mokkaachi!" target="_blank" class="contact-option whatsapp">
                         <span class="contact-option-icon">💬</span>
                         <span class="contact-option-text">WhatsApp</span>
                     </a>

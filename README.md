@@ -1,4 +1,4 @@
-# Mokkachi Maintenance Services
+# Mokkaachi Maintenance Services
 
 Professional industrial maintenance and engineering solutions website.
 
@@ -13,7 +13,7 @@ Professional industrial maintenance and engineering solutions website.
 ## 📁 Project Structure
 
 ```
-Mokkachi/
+Mokkaachi/
 ├── index.html          # Main HTML page
 ├── index.css           # Main styles
 ├── contact.css         # Contact section styles
@@ -44,4 +44,4 @@ Madurai, Tamil Nadu, India
 
 ## 📄 License
 
-© 2026 Mokkachi Maintenance Services. All rights reserved.
+© 2026 Mokkaachi Maintenance Services. All rights reserved.

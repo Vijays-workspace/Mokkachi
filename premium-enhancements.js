@@ -1,5 +1,5 @@
 /**
- * Mokkachi Premium Enhancements
+ * Mokkaachi Premium Enhancements
  * Advanced Interactive Effects
  */
 

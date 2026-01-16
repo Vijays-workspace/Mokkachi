@@ -1,11 +1,11 @@
-# Robots.txt for Mokkachi Maintenance Services
+# Robots.txt for Mokkaachi Maintenance Services
 # https://www.robotstxt.org/
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://mokkachi.com/sitemap.xml
+Sitemap: https://Mokkaachi.com/sitemap.xml
 
 # Crawl-delay for polite crawling
 Crawl-delay: 1

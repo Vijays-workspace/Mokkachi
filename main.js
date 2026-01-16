@@ -1,5 +1,5 @@
 // ============================================
-// Mokkachi Maintenance Services - JavaScript
+// Mokkaachi Maintenance Services - JavaScript
 // ============================================
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -229,7 +229,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // ========================================
     // Console Message
     // ========================================
-    console.log('%c🔧 Mokkachi Maintenance Services', 'font-size: 20px; font-weight: bold; color: #0066cc;');
+    console.log('%c🔧 Mokkaachi Maintenance Services', 'font-size: 20px; font-weight: bold; color: #0066cc;');
     console.log('%cProfessional Industrial & Electrical Maintenance', 'font-size: 14px; color: #00a8e8;');
     console.log('%cWebsite loaded successfully!', 'font-size: 12px; color: #2c3e50;');
 });

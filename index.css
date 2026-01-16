@@ -1,5 +1,5 @@
 /* ============================================
-   Mokkachi Maintenance Services - Design System
+   Mokkaachi Maintenance Services - Design System
    ============================================ */
 
 /* CSS Reset */
@@ -571,6 +571,14 @@ section {
 .service-card:hover .service-image {
   transform: scale(1.15);
   filter: brightness(1.1) saturate(1.2);
+}
+
+/* HVAC Service Image - Full view without cropping */
+.service-image.hvac-image {
+  object-fit: contain;
+  /* Gradient background matching the website theme */
+  background: linear-gradient(135deg, #f0f4f8 0%, #e8eef5 50%, #f5f7fa 100%);
+  padding: 10px;
 }
 
 .service-content {
